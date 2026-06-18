@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "url_shortener_backend"
+version = "0.1.0"
+description = "URL shortener backend"
+authors = ["Tommy Yong <86064806+cryptomeemaw@users.noreply.github.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.137.1"
+uvicorn = {extras = ["standard"], version = "^0.49.0"}
+sqlmodel = "^0.0.38"
+alembic = "^1.18.4"
+psycopg2-binary = "^2.9.12"
+pydantic-settings = "^2.14.1"
+pydantic = "^2.13.4"
+
+[tool.poetry.scripts]
+start = 'url_shortener_backend.app:main'
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.1.0"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
