@@ -11,4 +11,3 @@ class URL(SQLModel, table=True):
     created_at: datetime = Field(
         sa_column=Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), server_default=func.now(), nullable=False)
     )
-    visit_count: int = Field(default=0)

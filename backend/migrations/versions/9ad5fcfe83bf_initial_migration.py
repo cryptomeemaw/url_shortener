@@ -27,7 +27,6 @@ def upgrade() -> None:
     sa.Column('short_code', sqlmodel.sql.sqltypes.AutoString(length=9), nullable=False),
     sa.Column('original_url', sqlmodel.sql.sqltypes.AutoString(), nullable=False),
     sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=False),
-    sa.Column('visit_count', sa.Integer(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_url_short_code'), 'url', ['short_code'], unique=True)
