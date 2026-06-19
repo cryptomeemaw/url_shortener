@@ -7,6 +7,12 @@ Backend is FastAPI + PostgreSQL, frontend is React. The whole thing runs with Do
 ## Running it
 
 ```bash
+# inside backend directory
+cp .env.example .env
+```
+
+```bash
+# inside root directory
 docker compose up
 ```
 
